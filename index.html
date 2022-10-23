@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="upload-box">
+        <input type="file" accept="image/*">
+        <img id="scream" src="/images/upload.png" width="220" height="280" alt="dgu">
+        <p>Browse File to Upload</p>
+    </div>
+
+    <div class="card">
+        <input type="text" id="bgInput1" placeholder="#FFFFFF" onfocus="this.placeholder = ''"></input>
+        <input onclick="notRandomBG()" type="submit" value="Enter Background!">
+      </div>
+
+    <div class="row">
+        <div class="width">
+            <label>Width</label>
+            <input type="number">
+        </div>
+        <div class="height">
+            <label>Height</label>
+            <input type="number">
+        </div>
+    </div>
+    
+    <canvas id="myCanvas" width="300" height="360"></canvas>
+
+    <button>Download</button>
+
+    <script src="main.js"></script>
+</body>
+</html>
