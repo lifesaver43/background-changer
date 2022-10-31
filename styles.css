@@ -1,4 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 360px;
+    height: 320px;
+    padding: 20px;
+    background: rgb(201, 201, 201);
+    border-radius: 9px;
+    transition: height 0.2s ease;
+}
 
 canvas {
     background: blue;
+    height: 280px;
+    width: 320px;
 }

@@ -29,17 +29,6 @@ function loadFile(e) {
 
 fileIput.addEventListener("change", loadFile);
 
-// window.onload = function() {
-//     var canvas = document.getElementById("myCanvas");
-//     var ctx = canvas.getContext("2d");
-//     var img = document.getElementById("scream");
-//     ctx.drawImage(img, 10, 10, 220, 280);
-
-
-//    const dataURL = canvas.toDataURL();
-//    console.log(dataURL);
-// };
-
 function notRandomBG() {
     let colorInput = document.getElementById("bgInput1").value;
     let canvas = document.getElementById("myCanvas");
@@ -53,10 +42,18 @@ btn.onclick = function() {
     let ctx = canvas.getContext("2d");
     ctx.globalCompositeOperation = "destination-over";
     let colorInput = document.getElementById("bgInput1").value;
+    canvas.width = widthInput.value;
+    canvas.height = heightInput.value;
+
     ctx.fillStyle = colorInput;
+
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+    ctx.drawImage(previewImg, 10, 10, canvas.width - 20, canvas.height - 20);
+
+    
     anchor.href = canvas.toDataURL("image/png");
     anchor.download = "IMAGE.PNG";
     anchor.click();
 }
+
